@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+        <div class="container-fluid" id="container">
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <h3> Please answer the questions correctly in order to have your password reset!</h3>
+                    <div id="form">
+                        {% from "includes/_formHelpers.html" import render_field %}
+                        <form action="" method="POST">
+
+
+                            <div class="form-group">
+                            <label for="inputFirstAnswer">{{ session.question_one }}</label>
+                            {{render_field(form.answer_one, class_="form-control",id="inputFirstAnswer", placeholder="Answer")}}
+                            </div>
+                            <div class="form-group">
+                            <label for="inputFirstAnswer">{{ session.question_two }}</label>
+                            {{render_field(form.answer_two, class_="form-control",id="inputFirstAnswer", placeholder="Answer")}}
+                            </div>
+                            <div class="form-group">
+                            <label for="inputFirstAnswer">{{ session.question_three }}</label>
+                            {{render_field(form.answer_three, class_="form-control",id="inputFirstAnswer", placeholder="Answer")}}
+                            </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                    </div>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

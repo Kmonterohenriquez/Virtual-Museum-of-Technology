@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+       <!-- Content: -->
+<div class="check-out-container">
+    <h1 class="title">Check Out</h1>
+    <p class="lead text-muted">Your Cart:</p>
+
+    <form method="POST" action="/check_out">
+        <!----------------------------------------------------     item 1   --------------------------------------------------->
+        {% if items_1_on_cart > 0 %}
+        <hr>
+        <div>
+            <h4 class="card-title">T-shirt</h4>
+        <div class="mt-4 items-chechout">
+            <img src="static/img/t-shirt.jpg" alt="Card image" class="checkout-img">
+            <p class="text-muted text-left" > Exclusive t-shirt that shows how much you love technology. Many teenagers use it to tell the world how important is technology for them. </p>
+        </div>
+         <div class="card-body">
+             <h5 class="card-title text-right price">$ 4.50</h5>
+            <h5 class="card-title text-right price">Qty {{ items_1_on_cart }}</h5>
+            <div class="form-group form-check">
+                <button type="Submit" class="btn btn-light float-right" name="item-1" value="delete-1">
+                    Delete
+                </button>
+            </div>
+        </div>
+        {% endif %}
+
+        <!----------------------------------------------------     item 2   --------------------------------------------------->
+        {% if items_2_on_cart > 0 %}
+        <hr>
+        <h4 class="card-title">2030 Technology</h4>
+        <div class="mt-4 items-chechout">
+            <img src="static/img/tech-book.jpg" alt="Card image" class="checkout-img">
+            <p class="text-muted text-left" > Imagine living in 1958, and knowing that the integrated circuit the microchip--was about to be invented, and would revolutionize the world. </p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-right price">$5.50</h5>
+            <h5 class="card-title text-right price">Qty {{ items_2_on_cart }}</h5>
+            <div class="form-group form-check">
+                <button type="Submit" class="btn btn-light float-right" name="item-2" value="delete-2">
+                    Delete
+                </button>
+            </div>
+        </div>
+
+        {% endif %}
+
+        <!----------------------------------------------------     item 3   --------------------------------------------------->
+    {% if items_3_on_cart > 0 %}
+
+        <hr>
+
+        <h4 class="card-title">Irresistible </h4>
+        <div class="mt-4 items-chechout">
+            <img src="static/img/book-3.jpg" alt="Card image" class="checkout-img">
+            <p class="text-muted text-left">In this revolutionary book, Adam Alter, a professor of psychology and marketing at NYU, tracks the rise of behavioral addiction</p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-right price">$ 6.50 </h5>
+            <h5 class="card-title text-right price">Qty {{ items_3_on_cart }}</h5>
+            <div class="form-group form-check">
+                <button type="Submit" class="btn btn-light float-right" name="item-3" value="delete-3">
+                    Delete
+                </button>
+            </div>
+
+        </div>
+        {% endif %}
+
+        <!----------------------------------------------------     item 4   --------------------------------------------------->
+        {% if items_4_on_cart > 0 %}
+        <hr>
+        <h4 class="card-title">Computer Book</h4>
+        <div class="mt-4 items-chechout">
+        <img src="static/img/computer-book.png" alt="Card image" class="checkout-img">
+
+            <p class="text-muted text-left">Is a comprehensive course for intermediate level learners who need to be able to understand the English of computing for study and work. </p>
+        </div>
+        <div class="card-body ">
+            <h5 class="card-title  price">$ 7.50</h5>
+            <h5 class="card-title  price">Qty {{ items_4_on_cart }}</h5>
+            <div class="form-group form-check">
+                <button type="Submit" class="btn btn-light float-right " name="item-4" value="delete-4">
+                    Delete
+                </button>
+            </div>
+        </div>
+        {% endif %}
+        <hr>
+        <p class="font-weight-bold">Your Total: $<span>{{ items_total_price }}</span></p>
+
+
+        <!----------------------    Payment Area     --------------------------------->
+
+        <p class="lead text-muted mt-5 text-center">We Appreciate Your Business!</p>
+            {% from "includes/_formHelpers.html" import render_field %}
+        <label class="form-group-title ">Payment Information</label>
+            <div class="form-group">
+                <div class="col-md-10 mb-3">
+                    <label>Card Number</label>
+                    {{render_field(form.card_number, class_="form-control",id="inputCardNum", placeholder="0000 0000 0000 0000")}}
+                </div>
+                <div class="col-md-10 mb-3">
+                    <label>Expiration Date</label>
+                    {{render_field(form.exp_date, class_="form-control",id="inputExpDate", placeholder="01/01")}}
+                </div>
+                <div class="col-md-10 mb-3">
+                    <label> Security Code</label>
+                    {{render_field(form.cvv, class_="form-control",id="inputAutCode", placeholder="CVV")}}
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="savePayMenthod">
+                <label class="form-check-label" for="savePayMenthod">Save Payment Information</label>
+            </div>
+            <div class="form-group form-check">
+                <button type="Submit" class="btn btn-outline-primary" value="check_out" name="check_out">Check
+                    Out
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>
+{% endblock %}

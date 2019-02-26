@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+        <div class="container-fluid" id="container">
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="form">
+                        <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="inputPassword">Please enter your e-mail</label>
+                            <input type="input" name="email" class="form-control" id="security_answer" placeholder="E-mail" value="">
+                            </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+ <!--Store-->
+ <div class="store-container">
+     <form method="POST" action="">
+        <div class="row" id="main-row">
+            <!--empty side space-->
+            <div class="col-md-2 text-center">
+                
+            </div>
+            <!--Item 1-->
+            <div class="col-md-4 text-center">
+                <img src="static/img/t-shirt.jpg" alt="Card image" class="store-img">
+                <div class="card-body" id="form">
+                    <h4 class="card-title">T-shirt</h4>
+                    <h5 class="card-title">4.50</h5>
+                    <p class="card-text">Exclusive t-shirt that shows how much you love technology. Many teenagers use it to tell the world how important is technology for them. </p>
+                    <button type="Submit" class="btn btn-primary" name="itemOne" value="itemOne">Add to Cart</button>
+                </div>
+                <hr>
+            </div>
+            <!--Item 2-->
+            <div class="col-md-4 text-center">
+                <img  src="static/img/tech-book.jpg" alt="Card image" class="store-img">
+                <div class="card-body">
+                    <h4 class="card-title">2030 Technology </h4>
+                    <h5 class="card-title">5.50</h5>
+                    <p class="card-text">Imagine living in 1958, and knowing that the integrated circuit the microchip--was about to be invented, and would revolutionize the world. </p>
+                    <button type="Submit" class="btn btn-primary" name="itemOne" value="itemTwo">Add to Cart</button>
+                </div>
+                <hr>
+            </div>
+            <!--empty side space-->
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        <div class="row" id="main-row">
+                <!--empty side space-->
+                <div class="col-md-2 text-center">
+
+                </div>
+                <!--Item 3-->
+                <div class="col-md-4 text-center">
+                    <img src="static/img/book-3.jpg" alt="Card image" class="store-img">
+                    <div class="card-body">
+                    <h4 class="card-title"> Irresistible</h4>
+                    <h5 class="card-title">6.50 </h5>
+                        <p class="card-text">In this revolutionary book, Adam Alter, a professor of psychology and marketing at NYU, tracks the rise of behavioral addiction. </p>
+                        <button type="Submit" class="btn btn-primary" name="itemOne" value="itemThree">Add to Cart</button>
+                    </div>
+                    <hr>
+                </div>
+                <!--Item 4-->
+                <div class="col-md-4 text-center">
+                    <img src="static/img/computer-book.png" alt="Card image" class="store-img">
+                    <div class="card-body">
+                    <h4 class="card-title"> Computer Book </h4>
+                    <h5 class="card-title"> 7.50 </h5>
+                        <p class="card-text">Is a comprehensive course for intermediate level learners who need to be able to understand the English of computing for study and work.</p>
+                        <button type="Submit" class="btn btn-primary" name="itemOne" value="itemFour">Add to Cart</button>
+                    </div>
+                    <hr>
+                </div>
+                <!--empty side space-->
+                <div class="col-md-2">
+
+                </div>
+            </div>
+       </form>
+    </div>
+
+{% endblock %}

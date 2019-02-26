@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="security-container">
+
+        {% if session.logged_in %}
+        <h1 class="jumbotron-heading">Hello, {{session.name}}! Please set up your security questions!</h1>
+        <h3 class="jumbotron-heading">This is the only way you may retrieve your password.</h3>
+        <p class="lead text-muted">Choose 3 questions and set your answers.</p>
+        {% else %}
+        <h1 class="title ">Please set up your security questions!</h1>
+        <p class="lead text-muted mt-4">Choose 3 questions and set your answers.</p>
+        {% endif %}
+
+
+
+        {% from "includes/_formHelpers.html" import render_field %}
+        <form method="POST" action="">
+            <select name="selection" class="form-control mt-4" placeholder="Select One" method ="GET" action="/">
+                {% for question in choice %}
+                <option value= "{{question}}" SELECTED>{{question}}</option>"
+                {% endfor %}
+            </select>
+            {{render_field(form.answer_one, class_="form-control",id="inputFirstAnswer", placeholder="Answer")}}
+            <select name="selection_two" class="form-control mt-4" placeholder="Select One" method ="GET" action="/">
+                {% for question in choice %}
+                <option value= "{{question}}" SELECTED>{{question}}</option>"
+                {% endfor %}
+            </select>
+            {{render_field(form.answer_two, class_="form-control",id="inputSecondAnswer", placeholder="Answer")}}
+            <select name="selection_three" class="form-control mt-4" placeholder="Select One" method ="GET" action="/">
+                {% for question in choice %}
+                <option value= "{{question}}" SELECTED>{{question}}</option>"
+                {% endfor %}
+            </select>
+            {{render_field(form.answer_three, class_="form-control",id="inputThirdAnswer", placeholder="Answer")}}
+            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </form>
+
+</div>
+{% endblock %}
+

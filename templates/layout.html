@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="IT Capstone Assignment">
+        <meta name="author" content="Wesley Otero">
+        {% if session.logged_in %}
+          <title>Hello, {{ session.name }}! Welcome to the Virtual Museum of Technology!</title>
+        {% else %}
+          <title>Virtual Museum of Technology</title>
+        {% endif %}
+
+        <!--importing page icon for the tab-->
+        <link rel="shortcut icon" type='image/png' href="static/img/museum_logo.png">
+        <!--importing extra icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" >
+        <!--importing fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Fjalla+One" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='styles.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+    <!--Importing extra pages to the layout-->
+
+    {% include 'includes/_navbar.html' %}
+    {% include 'includes/messages.html' %}
+    {% if session.logged_in %}
+        {% include 'includes/_cart_modal.html' %}
+        {% include 'includes/_game_modal.html' %}
+    {% endif %}
+    {% block body %} {% endblock %}
+
+      <!-- Footer -->
+      <footer>
+          <div class="footer-container" >
+              <p class="text-muted">Virtual Museum of Technology Copyright 2019 &COPY;</p>
+
+              <div id="social-media-icons">
+                  <i class="fab fa-facebook "></i>
+                  <i class="fab fa-instagram "></i>
+                  <i class="fab fa-twitter-square "></i>
+              </div>
+            </div>
+      </footer>
+      <!-- Footer Ends-->
+<!-- Bootstrap -->
+      <script type="text/javascript" src="static/game.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>

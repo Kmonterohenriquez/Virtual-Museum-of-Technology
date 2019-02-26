@@ -1,0 +1,128 @@
+<!-- Moddals -->
+<!-- Moddals -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+<!-----------------------------------------------------   Item 1    --------------------------------------------------->
+{% if items_1_on_cart > 0 %}
+    <form method="POST" action="">
+          <div class="modal-body">
+            <div class="row" id="main-row">
+                <div class="col-sm-2 text-center">
+
+                </div>
+                <div class="col-sm-8 text-center">
+                    <div class="row">
+                            <div>
+                            <h4 class="card-title">T-shirt</h4>
+                         <div class="items_on_cart">
+                            <img src="static/img/t-shirt.jpg" alt="Card image" class="store-img" style="height:120px; width: 100px">
+                            <div class="card-body">
+                              <h5 class="card-title text-right">$4.50</h5>
+                              <h5 class="card-title text-right">Qty {{ items_1_on_cart }} </h5>
+                            </div>
+                         </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+{% endif %}
+<!-----------------------------------------------------   Item 2    --------------------------------------------------->
+{% if items_2_on_cart > 0 %}
+          <div class="modal-body">
+            <div class="row" id="main-row">
+                <div class="col-sm-2 text-center">
+
+                </div>
+                <div class="col-sm-8 text-center">
+                    <div class="row">
+                        <div>
+                            <h4 class="card-title">2030 Technology </h4>
+                            <div class="items_on_cart">
+                            <img src="static/img/tech-book.jpg" alt="Card image" class="store-img" style="height:120px; width: 100px">
+
+                            <div class="card-body">
+                              <h5 class="card-title text-right">5.50</h5>
+                              <h5 class="card-title text-right">Qty {{ items_2_on_cart }} </h5>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+{% endif %}
+<!-----------------------------------------------------   Item 3    --------------------------------------------------->
+{% if items_3_on_cart > 0 %}
+        <div class="modal-body">
+            <div class="row" id="main-row">
+                <div class="col-sm-2 text-center">
+
+                </div>
+                <div class="col-sm-8 text-center">
+                    <div class="row">
+                        <div >
+                            <h4 class="card-title">Irresistible</h4>
+                            <div class="items_on_cart">
+                            <img src="static/img/book-3.jpg" alt="Card image" class="store-img" style="height:120px; width: 100px">
+                            <div class="card-body">
+                              <h5 class="card-title text-right">$6.50</h5>
+                              <h5 class="card-title text-right">Qty {{ items_3_on_cart }} </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+{% endif %}
+<!-----------------------------------------------------   Item 4    --------------------------------------------------->
+{% if items_4_on_cart > 0 %}
+          <div class="modal-body">
+            <div class="row" id="main-row">
+                <div class="col-sm-2 text-center">
+
+                </div>
+                <div class="col-sm-8 text-center">
+                    <div class="row">
+                        <div >
+                            <h4 class="card-title">Computer Book</h4>
+                            <div class="items_on_cart">
+                            <img src="static/img/computer-book.png" alt="Card image" class="store-img" style="height:120px; width: 100px">
+
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title text-right">$7.50</h5>
+                                  <h5 class="card-title text-right">Qty {{ items_4_on_cart }} </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+{% endif %}
+<!-------------------------------------------------- EMPTY CART --------------------------------------------------->
+
+
+
+    </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="/check_out" class="btn btn-outline-primary" role="button" aria-pressed="true">Check Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

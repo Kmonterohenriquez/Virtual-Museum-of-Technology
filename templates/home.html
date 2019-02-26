@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container-fluid slider-container" >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner slider-image">
+    <div class="carousel-item active">
+      <img src="static/img/slider-1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item slider-image">
+      <img src="static/img/slider-2.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div>
+
+ <!--CARDS-->
+
+<div class="home-card-container">
+  <div class="row">
+  <div class="card home-card ">
+    <img src="static/img/smartphone.jpg" class="card-img-top" alt="smartphones">
+    <div class="card-body">
+      <h5 class="card-title">Smartphones</h5>
+      <p class="card-text"><spam class="bold-text">Smartphones</spam> are a class of mobile phones and of multi-purpose mobile computing devices.</p>
+      <a href="#" class="btn btn-primary ">Learn More</a>
+    </div>
+  </div>
+
+  <div class="card home-card ">
+    <img src="static/img/computer.jpg" class="card-img-top" alt="computers">
+    <div class="card-body">
+      <h5 class="card-title">Computer</h5>
+      <p class="card-text">An electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  <div class="card home-card">
+    <img src="static/img/Europe_1000.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!--CARDS END-->
+<div class="description-section">
+  <div class="lg-box container-md-width">
+    <div class="image">
+      <img src="static/img/tech-event.jpeg">
+    </div>
+    <div class="description">
+      <h1>Who we are</h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolorum harum illum nam nostrum nulla quidem reprehenderit sit voluptatibus. Ducimus esse minima molestiae molestias odit, porro recusandae. Delectus, obcaecati, quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium explicabo fugit iusto magni nihil! Debitis delectus eaque iste quis repellendus. Architecto dolorem error inventore magnam minus obcaecati quod, suscipit veritatis.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+ <!--Store-->
+
+ <div class="container-fluid profile-container">
+        <div class="row" id="main-row">
+            <!--empty side space-->
+            <div class="col-md-4 text-center">
+                
+            </div>
+            <!--User Profile-->
+            <div class="col-md-4 text-center">
+                <img src="static/img/default_profile.png" alt="Card image" id="store-img" style="height:200px; width: 200px">
+                <div class="card-body">
+                    <h4 class="card-title">{{ session.name }}</h4>
+                    <p class="text-left"><span class="font-weight-bold">Member since:  </span>{{ session.date }}</p>
+                    <hr>
+                    <p class="text-left"><span class="font-weight-bold">Score: </span> 0</p>
+
+                </div>
+               {% if answer_check == False %}
+               <div class="alert">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';"></span>
+                     <a href="/security_setup" style="color:red">ALERT: Set Security Questions!</a>
+               </div>
+               {% endif %}
+
+            </div>
+            <!--empty side space-->
+            <div class="col-md-4">
+                
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

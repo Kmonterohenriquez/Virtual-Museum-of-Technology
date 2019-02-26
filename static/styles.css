@@ -1,0 +1,420 @@
+/*---Main---*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Fredericka+the+Great|Press+Start+2P|Share+Tech+Mono|VT323');
+body, html{
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+/* Logo*/
+#logo{
+    width: 45px;
+    height: 50px;
+    margin-right: 5px;
+}
+/* Error or Success Message */
+.alert{
+position: absolute;
+width: 100%;
+}
+/* form helpers */
+.help-inline{
+color:red;
+}
+
+/*-------Home Page------------*/
+.slider-container{
+        margin: auto;
+        padding: 0;
+        max-width: 2000px;
+    }
+
+.slider-image{
+    max-height:550px;
+    max-width: 100%;
+}
+
+
+/* Home cards */
+.home-card-container{
+    margin: 60px auto;
+    width: 90%;
+    max-width: 1070px;
+    display: flex;
+}
+
+.home-card{
+    position: relative;
+    max-width: 350px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: transform .5s ease-out;
+    margin: 20px auto;
+}
+.home-card:hover{
+    transform: scale(0.96);
+}
+.home-card .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ml-10{
+margin-right: 10px;}
+
+.home-card .btn{
+    display: block;
+    margin: auto;
+    width:50%;
+}
+.home-section{
+    max-with: ;
+}
+.description-section{
+    border-top: 40px solid  #5dade2  ;
+    border-bottom: 40px solid  #5dade2  ;
+    background-color:   #5dade2  ;
+    width: 100%;
+    }
+.container-md-width{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.lg-box{
+    background-color: white;
+    /*border: 2px solid #e2e2e2;*/
+    border-radius: 20px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: minmax(200px, 40%) minmax(500px, 60%);
+    grid-auto-rows: auto;
+    overflow: hidden;
+}
+.lg-box .image{
+    float: left;
+    display: relative;
+    overflow: hidden;
+}
+
+.lg-box .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    float: right;
+    padding: 20px ;
+}
+.description-section img {
+    display: absolute;
+    height: auto;
+    max-height: 400px;
+    background-position: center;
+}
+
+/*-------Home Page ENDS------------*/
+
+/*-------Login Page------------*/
+.login-container{
+    padding: 50px;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100vh - 226px);
+}
+#login_pic{
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    width:250px;
+    height: 250px;
+}
+/*-------Login Page ENDS------------*/
+/*-------SignUp Page------------*/
+.signup-container{
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.title{
+    text-align: center;
+    color:#0b84d5;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2px;
+    font-size: 60px;
+}
+.form-group-title{
+    font-weight: bold;
+    letter-spacing:.2px;
+}
+
+.signup-container button{
+    width: 150px;
+    margin: 0 auto;
+}
+/*-------SignUp Page Ends -----------*/
+
+/* Security Page */
+/* This page is where the user set up her or his question if their password account is forgotten*/
+.security-container{
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+/* Security Page Ends*/
+
+/* About Page*/
+.museum-img{
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+  overflow: hidden;
+  background-position: bottom right;
+    position: content;
+    z-index: -1;
+}
+.museum-img img{
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom right;
+    }
+.about-info{
+    margin-top: -70px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 30px 6px -25px #b7b7b7;
+    z-index: 10;
+}
+.about-container h1{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 45px;
+    color: #36a1e8;
+    letter-spacing: .7px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+.about-container p{
+    font-family: 'Old Standard TT', serif;
+    font-size: 20px;
+}
+/* About Page Ends*/
+/* Profile Page */
+.profile-container{
+    height: calc(100vh - 226px);
+    padding-top: 50px;
+}
+
+/*Navbar*/
+#navbar{
+    margin: auto;
+    padding-right: 100px;
+}
+#navbar li a{
+    font-size: 16px;
+    transition: all 0.3s none;
+    }
+#navbar li a:hover{
+    transform: scale(1.08);
+    border-bottom: 3px dotted #0b84d5;
+}
+
+/*Containers*/
+.general-container{
+    width: 80%;
+    max-width: 1250px;
+    margin: 0 auto;
+    height: 100%;
+    }
+
+/* Museum Rooms */
+.room-container{
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+}
+.room-title{
+    text-align: center;
+    width: 100%;
+}
+.room-nav{
+    max-width: 450px;
+    margin:0 auto;
+    height: auto;
+    display: block;
+}
+.room-container .img-fluid{
+
+    border-radius: 15px;
+    box-shadow: 3px 3px 7px gray;
+    margin-bottom: 15px ;
+
+}
+.room-container .room-section{
+    height:100vh;
+}
+.room-container img{
+    width: 600px;
+}
+.room-container p{
+    font-family: 'Old Standard TT', serif;
+    font-size: 20px;
+}
+.room-container h5{
+font-family: 'Fjalla One', sans-serif;
+margin: 10px 0;
+}
+/*Footer*/
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color:  #f0f3f4;
+    clear: both;
+    }
+footer .footer-container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    }
+
+footer p{
+    padding-top: 20px;
+    text-align: center;
+}
+footer #social-media-icons i{
+    font-size: 30px;
+    color:  #afafaf;
+    float: right;
+    padding: 5px;
+    margin-left: 5px;
+    transition: all .2s ease-in;
+}
+
+footer #social-media-icons i:hover{
+       color:  #0b84d5;
+}
+
+
+/*---Store---*/
+.store-container{
+    padding-top: 30px ;
+}
+.store-img{
+    height: 300px;
+    width: 250px;
+    padding: px;
+    border-radius: 20px;
+    border: 2px solid #0b84d5;
+}
+
+#store-item{
+    text-align: center;
+    border: #333 solid 1px;
+}
+.modal-body .items_on_cart{
+    display: flex ;
+    width: 90%;
+}
+/*Check Out page */
+
+.check-out-container{
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    height: calc(100vh - 306px);
+    }
+.checkout-img{
+width: 150px;
+height: 150px;
+margin-right: 20px;
+}
+.items-chechout{
+    display: flex ;
+    width: 90%;
+}
+.check-out-container .card-body{
+
+}
+.check-out-container .price{
+    display: inline-block;
+    margin-left: 20px;
+    float: left;
+}
+/*Check Out page Ends*/
+
+@media (max-width: 470px) {
+    #page_title{
+        display:none;
+    }
+    .navbar{
+        position: relative;
+    }
+    #logo{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 25px);
+    }
+    .security-container,
+    .room-container,
+    .profile-container,
+    .login-container{
+    height: calc(100vh - 206px);
+    }
+    .check-out-container{
+    height: calc(100vh - 286px);
+    }
+}
+
+@media (max-width: 945px) {
+/* Home Page */
+
+	.card-deck-wrapper {margin-right:0;margin-left:0;}
+	.card-deck {
+	    display: block;
+	    width: 100%;
+	    margin-bottom: .75rem;
+	    table-layout: fixed;
+	    border-spacing: 1.25rem 0;
+	}
+	.card-deck .card {
+	    display: block;
+	    margin-bottom: .75rem;
+	    vertical-align: top;
+	    padding: 15px;
+	}
+  .card-deck .card:not(:first-child) {
+    margin-left: 0px;
+  }
+  .lg-box{
+    grid-template-columns: 1fr;
+}
+.description-section img {
+    max-height: 500px;
+}
+}
+@media (max-width: 990px){
+    #navbar li a:hover{
+    transform:none;
+    border-bottom: none;
+}
+}
+
+
+@media (max-width: 1250px){
+
+}
